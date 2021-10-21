@@ -2,18 +2,29 @@ import React from "react";
 import { Text, StyleSheet, ImageBackground, View, Image } from "react-native";
 import logo from "../assets/logo-red.png";
 
+// Componentes
+import ButtonComponet from "../components/ButtonComponet";
 function WelcomeScreen(props) {
   return (
+    // Contenedor padre
     <ImageBackground
+      blurRadius={10}
       source={require("../assets/background.jpg")}
       style={styles.background}
     >
+      {/* Contenedor de logo */}
       <View style={styles.logoContainer}>
         <Image source={logo} style={styles.logo} />
-        <Text>Sell what you dont want</Text>
+        <Text style={styles.tagLine}>Sell what you dont want</Text>
       </View>
-      <View style={styles.loginButton}></View>
-      <View style={styles.registerButton}></View>
+
+      {/* Contendor botones */}
+      <View style={styles.contenedorBotones}>
+        {/* Botones de Login y Register */}
+        <ButtonComponet title="login"></ButtonComponet>
+        <ButtonComponet title="register" color="secondary"></ButtonComponet>
+      </View>
+
     </ImageBackground>
   );
 }
@@ -33,15 +44,16 @@ const styles = StyleSheet.create({
     width: 70,
     height: 70,
   },
-  loginButton: {
+  contenedorBotones: {
+    flex: 1,
+    justifyContent: 'flex-end',
     width: "100%",
-    height: 70,
-    backgroundColor: "#fc5c65",
+    paddingHorizontal: 20
   },
-  registerButton: {
-    width: "100%",
-    height: 70,
-    backgroundColor: "#4ecdc4",
-  },
+  tagLine: {
+    fontSize: 20,
+    fontWeight: "600",
+    paddingVertical: 20,
+  }
 });
 export default WelcomeScreen;
