@@ -1,8 +1,8 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import ListingDetailScreen from "./app/screens/ListingDetailScreen";
+import ViewImageScreen from "./app/screens/ViewImageScreen";
 export default function App() {
-  return <ListingDetailScreen></ListingDetailScreen>;
+  return <ViewImageScreen></ViewImageScreen>;
 }
 
 const styles = StyleSheet.create({
