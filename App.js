@@ -1,15 +1,22 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import WelcomeScreen from "./app/screens/WelcomeScreen";
+import CardComponent from "./app/components/CardComponent";
 export default function App() {
-  return <WelcomeScreen></WelcomeScreen>;
+  return (
+    <View style={styles.container}>
+      <CardComponent
+        title="Red Jacket"
+        subTitle="$100"
+        image={require("./app/assets/jacket.jpg")}
+      />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    paddingTop: 100,
+    padding: 20,
+    backgroundColor: "#f8f4f4",
   },
 });
