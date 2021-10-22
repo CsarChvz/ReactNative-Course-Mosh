@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import MessageScreen from "./app/screens/MessageScreen";
-
+import "react-native-gesture-handler";
 export default function App() {
   return <MessageScreen></MessageScreen>;
 }

@@ -6,6 +6,8 @@ import ListItemComponent from "../components/ListItemComponent";
 import ListItemSeparatonComponent from "../components/ListItemSeparatonComponent";
 import Screen from "../components/Screen";
 import colors from "../config/colors";
+
+import ListItemDeleteAction from "../components/ListItemDeleteAction";
 // Lista de objetos
 const messages = [
   {
@@ -18,6 +20,12 @@ const messages = [
     id: 2,
     title: "T2",
     description: "D2",
+    image: require("../assets/mosh.jpg"),
+  },
+  {
+    id: 3,
+    title: "T3",
+    description: "D3",
     image: require("../assets/mosh.jpg"),
   },
 ];
@@ -34,6 +42,7 @@ function MessageScreen(props) {
             title={item.title}
             subTitle={item.description}
             image={item.image}
+            renderRightActions={ListItemDeleteAction}
           />
         )}
         ItemSeparatorComponent={() => (
