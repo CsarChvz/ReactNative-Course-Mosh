@@ -4,7 +4,7 @@ import colors from "../config/colors";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import AppText from "./AppText";
 import { TouchableOpacity } from "react-native-gesture-handler";
-function OptionAcountComponent({ title, nameVector, colorBola }) {
+function OptionAcountComponent({ title, nameVector, colorBola, onPress }) {
   return (
     <TouchableOpacity>
       <View style={styles.contenedorOpcion}>
