@@ -10,11 +10,12 @@ function ListItemComponent({
   image,
   onPress,
   renderRightActions,
+  color,
 }) {
   return (
     <Swipeable renderRightActions={renderRightActions}>
       <TouchableOpacity onPress={onPress}>
-        <View style={styles.container}>
+        <View style={[styles.container, { backgroundColor: colors[color] }]}>
           <Image style={styles.image} source={image} />
           <View style={styles.textContainer}>
             <AppText style={styles.title}>{title}</AppText>
@@ -43,6 +44,8 @@ const styles = StyleSheet.create({
     fontWeight: "700",
   },
   subTitle: {
+    paddingLeft: -20,
+    paddingRight: 55,
     color: colors.medium,
   },
 });
