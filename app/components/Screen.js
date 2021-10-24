@@ -1,12 +1,8 @@
 import React from "react";
 import { Platform, SafeAreaView, StyleSheet } from "react-native";
 import colors from "../config/colors";
-function Screen({ children, color }) {
-  return (
-    <SafeAreaView style={[styles.screen, { backgroundColor: colors[color] }]}>
-      {children}
-    </SafeAreaView>
-  );
+function Screen({ children, style }) {
+  return <SafeAreaView style={[styles.screen, style]}>{children}</SafeAreaView>;
 }
 
 const styles = StyleSheet.create({
