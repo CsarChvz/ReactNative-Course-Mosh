@@ -1,9 +1,14 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import ListingsScreen from "./app/screens/ListingsScreen";
+import AppTextInput from "./app/components/AppTextInput";
+import Screen from "./app/components/Screen";
 
 export default function App() {
-  return <ListingsScreen />;
+  return (
+    <Screen>
+      <AppTextInput placeholder="uwu" icon="email" />
+    </Screen>
+  );
 }
 
 const styles = StyleSheet.create({
