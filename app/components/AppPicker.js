@@ -44,7 +44,7 @@ function AppPicker({ icon, items, placeholder, ...others }) {
         </View>
       </TouchableWithoutFeedback>
 
-      <Modal visible={modalVisible} animationType="slide">
+      <Modal visible={modalVisible} animationType="slide" style={styles.modal}>
         <Screen>
           <Button title="close" onPress={() => setmodalVisible(false)} />
           <FlatList
