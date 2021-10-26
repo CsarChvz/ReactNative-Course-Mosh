@@ -1,12 +1,13 @@
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import AppTextInput from "./app/components/AppTextInput";
+import React, { useState } from "react";
+import { StyleSheet, Switch, Text, View } from "react-native";
 import Screen from "./app/components/Screen";
 
 export default function App() {
+  const [isNew, setisNew] = useState(false);
+
   return (
     <Screen>
-      <AppTextInput placeholder="uwu" icon="email" />
+      <Switch value={isNew} onValueChange={(newValue) => setisNew(newValue)} />
     </Screen>
   );
 }

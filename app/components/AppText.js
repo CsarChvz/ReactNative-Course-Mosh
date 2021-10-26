@@ -1,14 +1,10 @@
 import React from "react";
 import { Text, StyleSheet, Platform } from "react-native";
+import stylesGlobal from "../config/stylesGlobal";
 
 // Dios
 function AppText({ children, style }) {
-  return <Text style={[styles.text, style]}>{children}</Text>;
+  return <Text style={[stylesGlobal.text, style]}>{children}</Text>;
 }
-const styles = StyleSheet.create({
-  text: {
-    fontSize: 20,
-    fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir",
-  },
-});
+const styles = StyleSheet.create({});
 export default AppText;
