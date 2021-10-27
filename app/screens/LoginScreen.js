@@ -7,7 +7,6 @@ import AppTextInput from "../components/AppTextInput";
 import ButtonComponet from "../components/ButtonComponet";
 
 
-
 function LoginScreen(props) {
   return (
     <Screen>
